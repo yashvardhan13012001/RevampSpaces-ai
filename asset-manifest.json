@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/RevampSpaces-ai/static/css/main.8e5269b4.css",
+    "main.js": "/RevampSpaces-ai/static/js/main.f9f7aae8.js",
+    "index.html": "/RevampSpaces-ai/index.html",
+    "main.8e5269b4.css.map": "/RevampSpaces-ai/static/css/main.8e5269b4.css.map",
+    "main.f9f7aae8.js.map": "/RevampSpaces-ai/static/js/main.f9f7aae8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e5269b4.css",
+    "static/js/main.f9f7aae8.js"
+  ]
+}
