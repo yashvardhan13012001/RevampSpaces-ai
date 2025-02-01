@@ -1,0 +1,688 @@
+
+/* App.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #D5CEA3;
+  line-height: 1.6;
+}
+.navbarhome {
+  background: rgba(255, 255, 255, 0.15);  /* Transparent white background */
+  backdrop-filter: blur(50px);  /* Blur effect */
+  -webkit-backdrop-filter: blur(10px);  /* For Safari */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);  /* Subtle border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);  /* Soft shadow */
+  padding: 1.0rem;
+  text-align: center;
+  margin: 20px;
+  border-radius: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
+  position: fixed;  /* Fix the navbar at the top */
+  top: 0;  /* Keep it at the top */
+  left: 0;  /* Align to the left */
+  right: 0;
+  z-index: 999;  /* Make sure it's above other content */
+  display: flex;  /* Use flexbox for aligning items */
+  justify-content: space-between;  /* Distribute space between items */
+  align-items: center;  /* Align items vertically */
+}
+
+.navbarhome h1 {
+  color: #fdfdfd;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);  /* Subtle text shadow */
+}
+
+.navbarhome .navbar-links {
+  display: flex;  /* Arrange nav items horizontally */
+  gap: 2rem;  /* Space between each link */
+}
+
+.navbarhome .navbar-links a {
+  color: #fdfdfd;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbarhome .navbar-links a:hover {
+  color: #ffcc00;  /* Change color on hover */
+}
+
+
+
+/* Home Page */
+.home-wrapper {
+  min-height: 100vh;
+  background-color: #141414;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Hero Section */
+.hero {
+  
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background: #ff6b6b;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #ff3b3b;
+}
+
+/* About Section */
+#about {
+  padding: 2rem;
+  background-color: #080808;
+  text-align: center;
+}
+
+#about h2 {
+  margin-bottom: 1rem;
+  color: #fdfdfd;
+}
+
+.gallery h2 {
+  font-size: 2rem; /* Set the font size for the h2 element */
+  color: #ffffff;
+  margin-bottom: 20px; /* Adds space below the heading */
+}
+
+.gallery {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background-color: #141414;
+  padding: 20px 0;
+  height: 500px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.gallery-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding-top: 50px;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  animation: slide 60s linear infinite;
+}
+
+.gallery-track img {
+  width: 500px; /* Adjust image size */
+  height: 300px; /* Adjust image size */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Continuous sliding animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.gallery2 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background-color: #141414;
+  padding: 20px 0;
+  height: 400px;
+}
+
+.gallery-container2 {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.gallery-track2 {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  animation: slide 60s linear infinite;
+}
+
+.gallery-track2 img {
+  width: 500px; /* Adjust image size */
+  height: 300px; /* Adjust image size */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Continuous sliding animation */
+@keyframes slide {
+  0% {
+    transform: translateX(-50%); /* Start from the right */
+  }
+  100% {
+    transform: translateX(0%); /* Move to the left */
+  }
+}
+
+
+/* Features Section */
+.features {
+  padding: 50px 20px;
+  background-color: #000000;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.card-container h3 {
+  display: flex;
+  
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 250px;
+  height: 400px;
+  text-decoration: none;
+  /* color: #333; */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  /* font-size: 1.5rem;
+  color: #ffffff; */
+}
+
+/* .card p {
+  font-size: 1rem;
+  color: #79b3c2;
+} */
+
+/* Pricing Section */
+#pricing {
+  padding: 50px 20px;
+  background-color: #000000;
+  text-align: center;
+}
+
+.pricing h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.price-card {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  text-align: center;
+}
+
+.price-card h3 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.price-card p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+/* FAQ Section */
+#faq {
+  padding: 50px 20px;
+  background-color: #141414;
+  text-align: center;
+}
+
+.faq-item h3 {
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  margin-bottom: 20px;
+}
+
+/* Contact Section */
+#contact {
+  padding: 50px 20px;
+  background-color: #000000;
+  text-align: center;
+}
+
+#contact p {
+  font-size: 1.2rem;
+}
+
+/* Footer */
+.footer {
+  background: #222;
+  color: white;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Inpainting Page Styles */
+.inpainting-wrapper {
+  min-height: 100vh;
+  background-color: #ffb95e;
+}
+
+
+/* do it yourself*/
+.how-it-works {
+  padding: 50px 20px;
+  background-color: #141414; /* Light background color */
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.how-it-works .card-container h3 {
+  color: #ffffff;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);  /* Transparent white background */
+  backdrop-filter: blur(50px);  /* Blur effect */
+  -webkit-backdrop-filter: blur(10px);  /* For Safari */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);  /* Subtle border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);  /* Soft shadow */
+  padding: 2rem;
+  border-radius: 15px;
+  width: 500px;
+  height: 500px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-image {
+  width: 100%;  /* Adjust width as needed */
+  max-width: 250px;  /* Set a maximum width */
+  height: auto;  /* Maintain aspect ratio */
+  object-fit: cover;  /* Optional: Ensures the image fills the space */
+  margin: 10px auto; /* Optional: Adds margin around the images */
+}
+
+.card img.before {
+  /* padding-top: 50px; */
+  width: 100%;
+  max-width: 300px; /* Adjust as needed */
+  height: auto;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.card img.after {
+  /* padding-top: 50px; */
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px; /* Adjust as needed */
+  height: auto;
+  border-radius: 20px;
+}
+
+.card img.after1 {
+  /* padding-top: 50px; */
+  width: 100%;
+  max-width: 300px; /* Adjust as needed */
+  height: auto;
+  border-radius: 20px;
+}
+
+
+/*  */
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  margin: 0 0 1rem 0;
+  color: #ffffff;
+}
+
+.card p {
+  margin: 0;
+  color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.why-choose-us {
+  background-color: #141414;
+  text-align: center;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #fdfdfd;
+}
+
+.why-choose-us .card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.why-choose-us .card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  width: 500px; /* Keep width fixed */
+  height: 500px; /* Keep height fixed */
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.why-choose-us .card:hover {
+  transform: translateY(-5px);
+}
+
+.why-choose-us .card h3 {
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.why-choose-us .card p {
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .why-choose-us .card-container {
+    justify-content: center;
+  }
+
+  .why-choose-us .card {
+    width: 45%; /* Two cards per row */
+    height: auto; /* Adjust height */
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-us .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .why-choose-us .card {
+    width: 80%; /* Cards take up 80% of container width */
+    height: auto; /* Allow height to adjust */
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose-us .card {
+    width: 100%; /* Full width on small screens */
+  }
+}
+
+
+.image-types {
+  padding: 50px 20px;
+  background-color: #000000;
+  text-align: center;
+  height: 150vh;
+}
+
+.image-types h2 {
+  font-size: 2rem; /* Set the font size for the h2 element */
+  color: #ffffff;
+  margin-bottom: 20px; /* Adds space below the heading */
+}
+
+.image-grid {
+  display: flex;
+  flex-direction: column; /* Stack the cards vertically */
+  justify-content: center; /* Center the cards horizontally */
+  align-items: center; /* Ensure the cards are centered horizontally */
+  gap: 30px; /* Add equal space between the cards */
+  padding-top: 80px;
+}
+
+.image-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  max-width: 900px; /* Limit the width of the entire card container */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.image-card:nth-child(odd) {
+  flex-direction: row; /* Left image, right text */
+}
+
+.image-card:nth-child(even) {
+  flex-direction: row-reverse; /* Right image, left text */
+}
+
+.image-card .card-content {
+  flex: 1; /* Ensures the text section takes up remaining space */
+  margin: 0 20px;
+}
+
+.image-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.hover-image {
+  position: relative;
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.hover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hover-image .after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.hover-image:hover .after {
+  opacity: 1;
+}
+
+.hover-image:hover .before {
+  opacity: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .image-grid {
+    flex-direction: column; /* Stack the cards vertically on smaller screens */
+    align-items: center; /* Center the cards horizontally */
+    gap: 20px; /* Adjust the gap for smaller screens */
+  }
+
+  .image-card {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center; /* Center align text for smaller screens */
+  }
+
+  .image-card .card-content {
+    margin: 10px 0; /* Adjust margin for smaller screens */
+  }
+}
+
+
+
+
+
+.upcoming-tools {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.upcoming-tools h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.upcoming-tools .card-container {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around; /* Ensures equal spacing between cards */
+  gap: 20px; /* Adjust space between cards */
+  flex-wrap: wrap; /* Ensures the cards wrap on smaller screens */
+}
+
+.upcoming-tools .card-container h3{
+  color: #ffffff;
+}
+
+.upcoming-tools .card-container p{
+  color: #ffffff;
+}
+
+.upcoming-tools .card {
+  background: rgba(255, 255, 255, 0.15);  /* Transparent white background */
+  backdrop-filter: blur(50px);  /* Blur effect */
+  -webkit-backdrop-filter: blur(10px);  /* For Safari */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);  /* Subtle border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);  /* Soft shadow */
+  flex: 1; /* Makes all cards take equal space */
+  max-width: 300px; /* Prevents items from stretching too much */
+  min-width: 250px; /* Ensures a minimum width for responsiveness */
+  text-align: center;
+  /* background: #fff; */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.upcoming-tools .card:hover {
+  transform: translateY(-5px);
+}
+
+
+
